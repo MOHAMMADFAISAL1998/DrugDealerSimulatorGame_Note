@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order List Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-shell">
+        <header class="hero-panel">
+            <div>
+                <p class="eyebrow">Order List</p>
+                <h1>7-Item Requirement Tracker</h1>
+                <p class="hero-copy">Enter the required grams for every item simultaneously and watch the color indicators update instantly. Your order list is saved automatically.</p>
+            </div>
+        </header>
+
+        <main class="content-grid">
+            <section class="panel order-panel">
+                <div class="panel-header">
+                    <h2>Item Requirements</h2>
+                    <p>Set the weight in grams for all 7 items.</p>
+                </div>
+
+                <form id="order-form" class="order-form">
+                    <div class="item-grid" id="item-grid"></div>
+                </form>
+
+                <div class="actions">
+                    <button id="save-btn" class="btn btn-primary">Save Order</button>
+                    <button id="clear-btn" class="btn btn-secondary">Clear All</button>
+                </div>
+            </section>
+
+            <aside class="panel summary-panel">
+                <div class="panel-header">
+                    <h2>Summary</h2>
+                    <p>Order totals and status indicators.</p>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-block">
+                        <span>Total grams</span>
+                        <strong id="total-grams">0 g</strong>
+                    </div>
+                    <div class="summary-block">
+                        <span>Items filled</span>
+                        <strong id="filled-count">0 / 7</strong>
+                    </div>
+                    <div class="summary-info" id="summary-info">Enter a value for each item to see status.</div>
+                </div>
+
+                <div class="status-list" id="status-list"></div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
